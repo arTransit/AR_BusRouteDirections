@@ -1,0 +1,310 @@
+#! <?xml version="1.0" encoding="windows-1252" ?>
+#! <TRANSFORMER
+# TRANSFORMER_BEGIN generateDrivingDirections,0,Calculator,{D2ABC784-6CF3-4FFC-8A19-EBF42E32C5DE},"Linked by Default",No,NO_PARALLELISM,
+# <p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">
+    <span style=" font-weight:600;">Generate Driving Directions from Bus Routes </span>
+</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;"/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Inputs &amp; required fields:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">BusRoutes 'ID'
+# 'ORDR'
+# 'SIDE'
+# 'ROUTENUM'
+# 'ROUTENAME'
+# 'PTRNNUM'
+# 'BCTSYSTEM'
+# 'BCTREGION'
+# 'BUSSTOPID_START'
+# 'BUSSTOPID_END'</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Roads </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">'ID'
+# 'NAME_FULL'
+# 'RD_CLASS'</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">BusStops</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">'STOPID'
+# 'STOPNAME'
+# 'EXCHANGE'
+# 'PARKNRIDE'
+# 'AREANAME'</p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"/>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Outputs:</p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Features for each busroute
+#  containing RouteID
+#  PatternID
+#  and driving direction string. No geometry. </p>
+
+# TRANSFORMER_END
+#! LAST_SAVE_BUILD="FME(R) 2012 SP2 (20120417 - Build 12238 - WIN64)"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_SERVER_SERVICES=""
+#! SHOW_BOOKMARKS="true"
+#! GRID_VISIBLE="false"
+#! SHOW_ANNOTATIONS="true"
+#! CATEGORY="Calculator"
+#! BLOCKED_LOOPING="No"
+#! GRID_HEIGHT="50"
+#! REQUIREMENTS_KEYWORD="none"
+#! FME_BUILD_NUM="12238"
+#! SHOW_INFO_NODES="true"
+#! DESCRIPTION="&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&#10;    &lt;span style=&quot; font-weight:600;&quot;&gt;Generate Driving Directions from Bus Routes &lt;/span&gt;&#10;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;/&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Inputs &amp;amp; required fields:&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;BusRoutes &apos;ID&apos;,&apos;ORDR&apos;,&apos;SIDE&apos;,&apos;ROUTENUM&apos;,&apos;ROUTENAME&apos;,&apos;PTRNNUM&apos;,&apos;BCTSYSTEM&apos;,&apos;BCTREGION&apos;,&apos;BUSSTOPID_START&apos;,&apos;BUSSTOPID_END&apos;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Roads &lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&apos;ID&apos;,&apos;NAME_FULL&apos;,&apos;RD_CLASS&apos;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;BusStops&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&apos;STOPID&apos;,&apos;STOPNAME&apos;,&apos;EXCHANGE&apos;,&apos;PARKNRIDE&apos;,&apos;AREANAME&apos;&lt;/p&gt;&#10;&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;/&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Outputs:&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Features for each busroute, containing RouteID, PatternID, and driving direction string. No geometry. &lt;/p&gt;&#10;"
+#! GRID_SNAPTO="false"
+#! GRID_WIDTH="50"
+#! FMX_INSERT_MODE="Linked by Default"
+#! FME_PROCESS_COUNT="NO_PARALLELISM"
+#! HISTORY=",,"
+#! VIEW_POSITION="0 0"
+#! MAX_LOOP_ITERATIONS=""
+#! ZOOM_SCALE="100"
+#! PASSWORD=""
+#! VIEW_PAGE_BREAKS="false"
+#! WORKSPACE_VERSION="1"
+#! LAST_SAVE_DATE="2013-01-18T14:33:14"
+#! FME_PROCESS_GROUP_BY=""
+#! TITLE="generateDrivingDirections"
+#! USAGE=""
+#! REQUIREMENTS=""
+#! ATTR_TYPE_ENCODING="SDF"
+#! ITERATION_COUNT_ATTR=""
+#! >
+#! <DATASETS>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#! IDENTIFIER="15"
+#! NAME="Tag input features"
+#! DESCRIPTION=""
+#! TOP_LEFT="1385 -244"
+#! BOTTOM_RIGHT="2057 -1372"
+#! STICKY="true"
+#! COLOUR="0.376471,0.505882,0.968627"
+#! />
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="4"
+#! TYPE="AttributeCreator"
+#! VERSION="2"
+#! POSITION="1444 -755"
+#! ORDER="12"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FEATURENAME" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Add_ROAD"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="FEATURENAME,ROAD"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="5"
+#! TYPE="AttributeCreator"
+#! VERSION="2"
+#! POSITION="1447 -1057"
+#! ORDER="13"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FEATURENAME" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Add_BUSSTOP"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="FEATURENAME,BUSSTOP"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="6"
+#! TYPE="AttributeCreator"
+#! VERSION="2"
+#! POSITION="1461 -402"
+#! ORDER="14"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FEATURENAME" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="BUSSTOPID_START" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="BUSSTOPID_END" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Add_ROUTE"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="FEATURENAME,ROUTE,BUSSTOPID_START,100123,BUSSTOPID_END,100343"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#! IDENTIFIER="7"
+#! TYPE="PythonCaller"
+#! VERSION="3"
+#! POSITION="2440 -657"
+#! ORDER="15"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="FEATURENAME" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="ROUTENAME" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="PTRNNUM" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="BUSSTOPID_START" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="BUSSTOPID_END" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="ROUTEID" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="DIRECTIONS" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE="ROUTEID ROUTENAME PTRNNUM DIRECTIONS"/>
+#! <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Python_GenerateDrivingDirections"/>
+#! <XFORM_PARM PARM_NAME="PYTHONSYMBOL" PARM_VALUE="GenerateDrivingDirections.FMEProcessRoutes"/>
+#! <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#! <XFORM_PARM PARM_NAME="PYTHONSOURCE" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="8"
+#! NAME="BusRoutes"
+#! POSITION="700 -396"
+#! PUBLISHED="true"
+#! IS_SOURCE="true"
+#! />
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="10"
+#! NAME="Roads"
+#! POSITION="725 -774"
+#! PUBLISHED="true"
+#! IS_SOURCE="true"
+#! />
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="12"
+#! NAME="BusStops"
+#! POSITION="719 -1116"
+#! PUBLISHED="true"
+#! IS_SOURCE="true"
+#! />
+#! <SUBDOCUMENT_IO
+#! IDENTIFIER="14"
+#! NAME="OUTPUT"
+#! POSITION="3130 -771"
+#! IS_SOURCE="false"
+#! />
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="9"
+#! SOURCE_NODE="4"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="11"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="13"
+#! SOURCE_NODE="5"
+#! TARGET_NODE="7"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="16"
+#! SOURCE_NODE="8"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="17"
+#! SOURCE_NODE="10"
+#! TARGET_NODE="4"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="18"
+#! SOURCE_NODE="12"
+#! TARGET_NODE="5"
+#! SOURCE_PORT_DESC="0"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="19"
+#! SOURCE_NODE="7"
+#! TARGET_NODE="14"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </TRANSFORMER>
+#! 
+#! START_HEADER
+#! END_HEADER
+
+LOG_FILTER_MASK -1
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+DEFAULT_MACRO generateDrivingDirections_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(generateDrivingDirections_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(generateDrivingDirections_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(generateDrivingDirections_WORKSPACE_NAME)_BusRoutes Input Splitter"   INPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_BusRoutes"   OUTPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_BusRoutes"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(generateDrivingDirections_WORKSPACE_NAME)_Roads Input Splitter"   INPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Roads"   OUTPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Roads"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(generateDrivingDirections_WORKSPACE_NAME)_BusStops Input Splitter"   INPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_BusStops"   OUTPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_BusStops"
+# -------------------------------------------------------------------------
+
+Tcl2 proc 77922852_630e_42b5_a454_e09bc414ff470_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {$(generateDrivingDirections_WORKSPACE_NAME)_Add_ROAD}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING} $attrVal {$(generateDrivingDirections_WORKSPACE_NAME)_Add_ROAD}];         } else {             set attrVal [FME_DecodeText $attrVal];         };         FME_SetAttribute $attrName $attrVal;     }; };
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(generateDrivingDirections_WORKSPACE_NAME)_Add_ROAD    INPUT  FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Roads"    OUTPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Add_ROAD_OUTPUT"         "@Tcl2( 77922852_630e_42b5_a454_e09bc414ff470_attrSetter {(FEATURENAME,ROAD)} )"
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc 6cbcb22f_4c19_472b_b864_1f17a027f0730_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {$(generateDrivingDirections_WORKSPACE_NAME)_Add_BUSSTOP}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING} $attrVal {$(generateDrivingDirections_WORKSPACE_NAME)_Add_BUSSTOP}];         } else {             set attrVal [FME_DecodeText $attrVal];         };         FME_SetAttribute $attrName $attrVal;     }; };
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(generateDrivingDirections_WORKSPACE_NAME)_Add_BUSSTOP    INPUT  FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_BusStops"    OUTPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Add_BUSSTOP_OUTPUT"         "@Tcl2( 6cbcb22f_4c19_472b_b864_1f17a027f0730_attrSetter {(FEATURENAME,BUSSTOP)} )"
+
+# -------------------------------------------------------------------------
+
+Tcl2 proc 688c37db_fd6a_4d6a_b115_eb7a8cae2dbb0_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {$(generateDrivingDirections_WORKSPACE_NAME)_Add_ROUTE}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING} $attrVal {$(generateDrivingDirections_WORKSPACE_NAME)_Add_ROUTE}];         } else {             set attrVal [FME_DecodeText $attrVal];         };         FME_SetAttribute $attrName $attrVal;     }; };
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(generateDrivingDirections_WORKSPACE_NAME)_Add_ROUTE    INPUT  FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_BusRoutes"    OUTPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Add_ROUTE_OUTPUT"         "@Tcl2( 688c37db_fd6a_4d6a_b115_eb7a8cae2dbb0_attrSetter {(FEATURENAME,ROUTE,BUSSTOPID_START,100123,BUSSTOPID_END,100343)} )"
+
+# -------------------------------------------------------------------------
+
+
+FME_PYTHON_PATH "$(FME_MF_DIR)"
+
+FACTORY_DEF * PythonFactory    FACTORY_NAME $(generateDrivingDirections_WORKSPACE_NAME)_Python_GenerateDrivingDirections    INPUT  FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Add_ROAD_OUTPUT"    INPUT  FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Add_ROUTE_OUTPUT"    INPUT  FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Add_BUSSTOP_OUTPUT"    SYMBOL_NAME GenerateDrivingDirections.FMEProcessRoutes    PYTHON_NAMESPACE FMEOBJECTS    SOURCE_CODE    OUTPUT PYOUTPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Python_GenerateDrivingDirections_OUTPUT"
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(generateDrivingDirections_WORKSPACE_NAME)_OUTPUT Output Collector"   INPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_Python_GenerateDrivingDirections_OUTPUT"   OUTPUT FEATURE_TYPE "$(generateDrivingDirections_WORKSPACE_NAME)_OUTPUT"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(generateDrivingDirections_WORKSPACE_NAME))}]
