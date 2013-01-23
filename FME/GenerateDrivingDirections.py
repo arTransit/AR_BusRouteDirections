@@ -361,9 +361,9 @@ class BusRoute( object ):
 		# angle between input segments
 		difference = (nextSegment.startAzimuth - lastSegment.endAzimuth) %360
 		
-		logMessage("BusRoute.getTurnDirection difference: %s" % str(difference) )
-		logMessage("BusRoute.getTurnDirection startAzimuth: %s" % str(nextSegment.startAzimuth) )
-		logMessage("BusRoute.getTurnDirection endAzimuth: %s" % str(lastSegment.endAzimuth) )
+		#logMessage("BusRoute.getTurnDirection difference: %s" % str(difference) )
+		#logMessage("BusRoute.getTurnDirection startAzimuth: %s" % str(nextSegment.startAzimuth) )
+		#logMessage("BusRoute.getTurnDirection endAzimuth: %s" % str(lastSegment.endAzimuth) )
 		
 		if lastSegment.endPointID != nextSegment.startPointID:
 			logMessage ("ERROR: BusRoute.getTurnDirection: topology problem - segments do not connect", True)
