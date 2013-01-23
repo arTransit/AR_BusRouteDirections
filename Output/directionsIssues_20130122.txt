@@ -1,0 +1,19 @@
+Route Direction Issues:
+
+Turning lane? - may just turn right
+ERROR: Turning lane on right
+       Take turning lane on Left (going north-west), travel 79 meters.
+
+eg:
+7,100,"Starting at eastbound Laurier NS Sifton (Stop ID: 104534).  On Laurier Dr (going east), travel 0.2 km.  Turn Right on Aberdeen Dr (going north-west), travel 0.8 km.  Turn Right on Van Horne Dr (going north), travel 1.6 km.  Turn Right on Howe Rd (going east), travel 0.5 km.  Turn Left on Hugh Allan Dr (going west), travel 0.8 km.  Turn Right on Rogers Way (going north-east), travel 0.7 km.  Turn Left on Hwy 5A (going north-west), travel 0.3 km.  Continue Straight on Hillside Way (going north), travel 0.3 km.  Take turning lane on Left (going north-west), travel 79 meters.  Merge on Hillside Dr (going north), travel 1.6 km.  Turn Right on bus Lane (going south-east), travel 0.2 km.  Turn Right on Dalhousie Dr (going south-east), travel 0.9 km.  Turn Left on Notre Dame Dr (going east), travel 1.2 km.  Turn Left on Summit Dr (going north-west), travel 0.7 km.  Take turning lane on Right (going west), travel 52 meters.  Merge on Columbia St W (going north), travel 1.7 km.  Continue Straight on Columbia St (going east), travel 0.3 km.  Turn Left on 3rd Ave (going north), travel 0.4 km.  Turn Right on Seymour St (going east), travel 0.5 km.  Turn Left on 6th Ave (going north), travel 0.2 km.  Turn Right on bus Lane (going north-east), travel 88 meters.  Finish at Bay C at Lansdowne Exchange (Stop ID: 104504)."
+
+Not recognizing airport loop
+
+eg: 
+1,201,"Starting at Bay I at Lansdowne Exchange (Stop ID: 104200).  On Lansdowne St (going west), travel 0.9 km.  Continue Straight on Victoria St W (going west), travel 0.7 km.  Take Victoria St Onramp on Left (going west), travel 0.2 km.  Merge on Overlander Bridge (going north), travel 0.5 km.  Continue on Fortune Dr (going north), travel 38 meters.  Turn Right on Tranquille Rd (going north-east), travel 2.3 km.  Turn Right on Sydney Ave (going north-east), travel 0.2 km.  Continue Straight on 7th St (going north-east), travel 14 meters.  Turn Left on Fortune Dr (going north-west), travel 0.5 km.  Continue on Tranquille Rd (going west), travel 5.5 km.  Turn Left on Airport Rd (going west), travel 2.2 km.  Turn Right on Tranquille Rd (going south), travel 1.3 km.  Turn Left on Crestline St (going north), travel 0.4 km.  Finish at northbound Crestline FS Greenfield (Stop ID: 104227)."
+
+Road segment between dual carriageway should be ignored
+Continue Straight on Pine Springs Rd (going west), travel 11 meters.
+eg
+3,100,"Starting at eastbound Harrington NS Overlander (Stop ID: 104353).  On Harrington Rd (going east), travel 0.1 km.  Turn Right on Overlander Dr (going south-west), travel 0.4 km.  Turn Right on Sicamore Dr (going north-west), travel 0.4 km.  Turn Left on Bank Rd (going south), travel 0.2 km.  Turn Right on Overlander Dr (going west), travel 0.2 km.  Continue Straight on Pine Springs Rd (going west), travel 11 meters.  Turn Left on Westsyde Rd (going south), travel 7.1 km.  Turn Left on Batchelor Dr (going south), travel 0.3 km.  Continue Straight on 8th St (going south-east), travel 1.1 km.  Continue Straight on Tranquille Rd (going south), travel 0.2 km.  Turn Left on Sydney Ave (going north-east), travel 0.2 km.  Turn Right on Fortune Dr (going south-east), travel 2.0 km.  Continue on Overlander Bridge (going south), travel 0.5 km.  Continue on Victoria St Offramp (going south-east), travel 64 meters.  Merge on Victoria St W (going east), travel 0.6 km.  Continue Straight on Seymour St W (going south-east), travel 0.3 km.  Continue Straight on Seymour St (going east), travel 0.8 km.  Turn Left on 6th Ave (going north), travel 0.2 km.  Turn Right on bus Lane (going north-east), travel 0.2 km.  Turn Right on Lansdowne St (going west), travel 65 meters.  Finish at Bay G at Lansdowne Exchange (Stop ID: 104318)."
+
